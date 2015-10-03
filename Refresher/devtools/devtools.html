@@ -1,0 +1,6 @@
+window.onload = function() {
+    var port = chrome.extension.connect({ name: "table-row-count-port" });
+    document.getElementById("mystartbutton").onclick = function() {
+        port.postMessage({ type: "table-row-count_start"});
+    }
+}

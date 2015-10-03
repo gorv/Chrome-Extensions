@@ -1,0 +1,25 @@
+{
+    "name": "Refresher",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description" : "Auto Refresher with timer to scrape table row count",
+    "icons": { "32": "main.png","64": "main.png" },
+    "omnibox": { "keyword" : "yeah" },
+    "browser_action": {
+        "default_icon": { "32": "icon.png" },
+        "default_title": "That's the tool tip",
+        "default_popup": "browseraction/popup.html"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "content_scripts": [{
+        "matches": ["https://www.coursehero.com/qa/expert/browse_questions.php"],
+        "js": ["content.js"]
+    }],
+    "permissions": [
+        "storage"
+    ],
+    "devtools_page": "devtools/devtools.html"
+}

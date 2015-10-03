@@ -1,0 +1,25 @@
+.wrapper {
+    width: 190px;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+.timer {
+    width: 225px;
+    float: left;
+    height: 20px;
+    padding: 5px;
+}
+.flex {
+    display: flex;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    padding: 10px;
+    height: 50px;
+}
+input[type="button"] {
+    width: 30em;
+    margin-right: 20px;
+    height: 45px;
+   
+}

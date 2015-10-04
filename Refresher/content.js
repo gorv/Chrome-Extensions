@@ -29,9 +29,8 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
                 if(storageChange.oldValue!=null && parseInt(storageChange.oldValue) < parseInt(storageChange.newValue)){
                     for(var i=0;i<=30;i++){
                         beep(); 
-                        console.log("Beep Sound");
                     }
-                    alert("New Question Added")
+                    setTimeout(function(){alert("New Question Added!")},600);
                     console.log('Storage key "%s" in namespace "%s" changed. ' +
                       'Old value was "%s", new value is "%s".',
                       key,
